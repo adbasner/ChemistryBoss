@@ -13,3 +13,28 @@ require("@rails/activestorage").start()
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import Vue from 'vue/dist/vue.js'
+import VueRouter from 'vue-router/dist/vue-router.js'
+import App from '../app.vue'
+import Dick from '../Dick.vue'
+
+Vue.use(VueRouter)
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const router = new VueRouter({
+    routes: [
+      { path: "/", component: App },
+      { path: "/about", component: Dick },
+    ],
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 };
+    }
+  });
+
+  let app = new Vue({
+    el: '#app',
+    router
+  });
+});
