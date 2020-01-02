@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <nav-bar></nav-bar>
+  <div id="home">
+    <navbar></navbar>
     <p>{{ message }}</p>
   </div>
 </template>
@@ -15,7 +15,7 @@ export default {
     }
   },
   components: {
-    'nav-bar': Navbar
+    Navbar
   }
 }
 </script>

@@ -17,16 +17,15 @@ require("@rails/activestorage").start()
 import Vue from 'vue/dist/vue.js'
 import VueRouter from 'vue-router/dist/vue-router.js'
 import App from '../app.vue'
-import Dick from '../Dick.vue'
+import About from '../about.vue'
 
 Vue.use(VueRouter)
 
 document.addEventListener('DOMContentLoaded', () => {
-
   const router = new VueRouter({
     routes: [
       { path: "/", component: App },
-      { path: "/about", component: Dick },
+      { path: "/about", component: About },
     ],
     scrollBehavior: function (to, from, savedPosition) {
       return { x: 0, y: 0 };

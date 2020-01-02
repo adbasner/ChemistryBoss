@@ -1,7 +1,7 @@
 <template>
-  <div id="dick">
+  <div id="about">
     <navbar></navbar>
-    <p>{{ message2 }}</p>
+    <p>{{ message }}</p>
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import Navbar from './Navbar.vue'
 export default {
   data: function () {
     return {
-      message2: "Hello Dick!"
+      message: "Hello About!"
     }
   },
   components: {
@@ -22,7 +22,7 @@ export default {
 
 <style scoped>
 p {
-  font-size: 4em;
+  font-size: 2em;
   text-align: center;
 }
 </style>
